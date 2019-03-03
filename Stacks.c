@@ -127,8 +127,6 @@ void tfbotm(struct stack *s)
 void npop(struct stack *s)
 {
 	int n,i,y;
-//	struct stack temp;
-//	temp.top=-1;
 	printf("Enter the no of elements to be poped.\n");
 	scanf("%d",&n);
 	if (s->top<n-1){
