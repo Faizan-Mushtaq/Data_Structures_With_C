@@ -70,7 +70,7 @@ char pop(struct stack *s)
 				  }
 				  push(s,infixexp[i]);
 			  }
-			 /*else
+			 /*else//can skip it because we have witten '<=' in upper else if statement.
 			  {
 			  	while(prcd(infixexp[i])==prcd(s->exp[s->top]))
 			  	{
