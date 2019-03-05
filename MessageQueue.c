@@ -32,7 +32,7 @@ while(1)
 	{
 		case 1: getchar();      //to read enter
 				printf("ENTER THE MESSAGE TO SEND:\n");
-				gets(str);
+				gets(str);//Use scanset instead that is better than gets()
 				sendmsg(&q,str);    //enqueue
 				break;
 		case 2:
