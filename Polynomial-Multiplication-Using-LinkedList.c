@@ -10,7 +10,7 @@ Node readpoly(Node);
 Node insert(Node,int,int);
 Node mul(Node,Node);
 void display(Node);
-Node simplify(Node);
+Node simplify(Node);//to simplify the polynomial to least terms
 
 int main()
 {
