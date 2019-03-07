@@ -30,11 +30,11 @@ int main()
     first=insert(first,value);
   }
   printf("FIRST NUMBER IS:\n");
-  puts(str1);//display(first);because prints backwards
+  puts(str1);//because display(first); prints backwards
   for(i=0;str2[i]!='\0';i++)
   {
     value=str2[i]-48;
-    second=insert(second,value);//inserts front that is why prints backwards.
+    second=insert(second,value);//inserts front that is why display() prints backwards.
   }
   printf("SECOND NUMBER IS:\n");
   puts(str2);//display(second);
@@ -86,7 +86,7 @@ struct node *add(struct node *first,struct node *second)
         if(first!=h1){first=first->next;}
         if(second!=h2){second=second->next;}
       }
-      if(first!=h1)
+      if(first!=h1)//if first no is long
       {
         while(first!=h1)
         {
@@ -97,7 +97,7 @@ struct node *add(struct node *first,struct node *second)
           if(first!=h1){first=first->next;}
         }
       }
-      if(second!=h2)
+      if(second!=h2)//if second no is long
       {
         while(second!=h2)
         {
@@ -108,7 +108,7 @@ struct node *add(struct node *first,struct node *second)
           if(second!=h2){second=second->next;}
         }
       }
-      if(carry>0)
+      if(carry>0)//if any carry is left
       {
         res=insert(res,carry);
       }
