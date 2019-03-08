@@ -11,9 +11,9 @@ int main()
 {
     struct node *head=NULL;
     int m,n,row,col,data,ct;
-    printf("enter order\n");
+    printf("enter order\n");//total order of matrix
     scanf("%d%d",&m,&n);
-    printf("enter no of entries\n");
+    printf("enter no of entries\n");//total no of non zero elements in matrix
     scanf("%d",&ct);
     for(int i=0;i<ct;i++)
     {
