@@ -100,7 +100,7 @@ struct exptree *createexptree(char infix[20])
                 }
          }
      } //end of for
-     while(top1 !=-1)
+     while(top1 !=-1)//if any character is left in stacks
      {
          t1=treest[top2--];
          t2=treest[top2--];
@@ -111,7 +111,7 @@ struct exptree *createexptree(char infix[20])
      }
      return treest[top2];
 }
-void inorder(struct exptree *root)
+void inorder(struct exptree *root)//infix exp
 {
     if(root!=NULL)
     {
@@ -120,7 +120,7 @@ void inorder(struct exptree *root)
         inorder(root->right);
     }
 }
-void preorder(struct exptree *root)
+void preorder(struct exptree *root)//for prefix expression
 {
     if(root!=NULL)
     {
@@ -129,7 +129,7 @@ void preorder(struct exptree *root)
         preorder(root->right);
     }
 }
-void postorder(struct exptree *root)
+void postorder(struct exptree *root)//for post fix expression
 {
     if(root!=NULL)
     {
