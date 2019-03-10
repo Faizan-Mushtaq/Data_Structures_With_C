@@ -12,7 +12,7 @@ int main()
     int ch,i,value;
     for(i=0;i<SIZE;i++)
     {
-        htable[i]=-1;
+        htable[i]=-1;//initializing the hash table to -1
     }
     while(1)
     {
@@ -39,7 +39,7 @@ void insert(int value)
 {
     int index,i,flag=0;
     for(i=0;i<SIZE;i++)
-    {
+    {   //Hash function.
         /*h(x)=f(i) mod TABLE SIZE where f(i)=i */
         index=(value+i)%SIZE;
         if(htable[index]==-1)
