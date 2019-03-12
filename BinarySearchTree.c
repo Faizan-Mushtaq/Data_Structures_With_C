@@ -60,7 +60,7 @@ struct bstree *insert(struct bstree *root,struct bstree *newnode)
   {return newnode;}
   if(newnode->data < root->data)
   root->left=insert(root->left,newnode);
-  else //  (newnode->data>root->data)
+  else //  if (newnode->data>root->data) we can use this also
   root->right=insert(root->right,newnode);
 
 }
@@ -101,15 +101,15 @@ struct bstree *delete(struct bstree *root,int key)
   {root->right=delete(root->right,key);}
   else
   {
-    if(root->left==NULL)
-    {struct bstree *temp=root->right;
-    free(root);
+    if(root->left==NULL)//if left child doesn't exist
+    {struct bstree *temp=root->right;//copy right child
+    free(root);//delete that root
     return temp;
     }
-    else if(root->right==NULL)
+    else if(root->right==NULL)//if right child doesn't exist
     {
-      struct bstree *temp=root->left;
-      free(root);
+      struct bstree *temp=root->left;//copy left child
+      free(root);//delete that root
       return temp;
     }
     struct bstree *temp=minvalue(root->right);
