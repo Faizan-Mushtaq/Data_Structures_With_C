@@ -8,9 +8,9 @@ struct stack {
 void push(struct stack *, int);
 int  pop(struct stack *);
 void display(struct stack *);
-void tftop(struct stack *);
-void tfbotm(struct stack *);
-void npop(struct stack *);
+void tftop(struct stack *);//gives third element from top without disturbing the stack
+void tfbotm(struct stack *);//gives third element from bottom without disturbing the stack
+void npop(struct stack *);//pops n elements from stack
 
 int main()
 {
