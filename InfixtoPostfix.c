@@ -40,7 +40,7 @@ char pop(struct stack *s)
  {
  	int i=0,j=0;
  	char ch;
- 	while (infixexp[i]!='\0')
+ 	while (infixexp[i]!='\0')// better use for loop
  	{
  		if(isalnum(infixexp[i]))
 		 {
