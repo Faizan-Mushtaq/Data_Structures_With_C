@@ -71,7 +71,7 @@ struct node *add(struct node *first,struct node *second)
     struct node *res=NULL,*temp,*prev=NULL,*h1,*h2;
     int carry=0,sum=0;
     res=getnode();
-    res->data=0;
+    res->data=0;//value in header node
     res->next=res;//header node
     h1=first;
     h2=second;
@@ -118,7 +118,7 @@ void display(struct node *head)
 {
   struct node *temp;
  temp=head;
- temp=temp->next;//remove header node
+ temp=temp->next;//to leave header node
   while(temp!=head)//temp->next!=head;WHY?
   {
     printf("%d",temp->data);
