@@ -113,7 +113,7 @@ struct bstree *delete(struct bstree *root,int key)
       return temp;
     }
     struct bstree *temp=minvalue(root->right);
-    root->data=temp->data;
+    root->data=temp->data;//  to replace root by inorder successor and then delete
     root->right=delete(root->right,temp->data);
   }
   return root;
